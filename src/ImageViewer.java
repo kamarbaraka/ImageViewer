@@ -29,7 +29,7 @@ class ImageFrame extends JFrame
     JLabel label;
     JFileChooser chooser;
     JMenuBar menubar;
-    JMenu fileMenu, exitMenu;
+    JMenu fileMenu;
     JMenuItem openMenuItem;
     ImageIcon icon;
 
@@ -56,10 +56,6 @@ class ImageFrame extends JFrame
         openMenuItem = new JMenuItem("Open");
         fileMenu.add(openMenuItem);
         openMenuItem.addActionListener(this);
-
-        exitMenu = new JMenu("Exit");
-        menubar.add(exitMenu);
-        exitMenu.addActionListener(this);
     }
 
     /**@param event
@@ -82,12 +78,6 @@ class ImageFrame extends JFrame
 
                 label.setIcon(icon);
             }
-        }
-
-        //define the action taken when exit menu item is clicked
-        else if (event.getSource() == exitMenu){
-            //exit the program
-            System.exit(0);
         }
     }
 }
